@@ -1,8 +1,15 @@
+local cjson = require "cjson"
 local _M = {}
 
 function _M.execute(conf)
-    ngx.log(ngx.ERR, "============ Hello World! ============")
-    ngx.header["Hello-World"] = "Hello World!!!"
+    ngx.say(
+    cjson.encode(
+      {
+        data = "Hello-World"
+      }
+    )
+  )
+  ngx.exit(200)
 end
 
 return _M
