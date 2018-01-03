@@ -17,7 +17,7 @@ docker run -d --name kong \
     -p 8443:8443 \
     -p 8001:8001 \
     -p 8444:8444 \
-    muchrm/kong
+    muchrm/kong:0.11.2
 
 sleep 20
 
