@@ -3,14 +3,14 @@
 -- can be called from your child implementation and will print logs
 -- in your `error.log` file (where all logs are printed).
 local BasePlugin = require "kong.plugins.base_plugin"
-local access = require "kong.plugins.helloworld.access"
+local access = require "kong.plugins.mis-login.access"
 local CustomHandler = BasePlugin:extend()
 
 -- Your plugin handler's constructor. If you are extending the
 -- Base Plugin handler, it's only role is to instanciate itself
 -- with a name. The name is your plugin name as it will be printed in the logs.
 function CustomHandler:new()
-  CustomHandler.super.new(self, "helloworld")
+  CustomHandler.super.new(self, "mis-login")
 
 
 end

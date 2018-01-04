@@ -7,7 +7,7 @@ docker run -d --name kong-database -p 5432:5432 \
 	-e "POSTGRES_DB=kong" \
 	postgres:9.4
 
-sleep 5
+sleep 30
 
 docker run --rm --name kong-migration \
 	--link kong-database:kong-database \

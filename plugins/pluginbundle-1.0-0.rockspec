@@ -7,14 +7,15 @@ description = {
   license = "None"
 }
 dependencies = {
-  "lua ~> 5.1", "inspect ~> 3.1.0"
-  -- If you depend on other rocks, add them here
+  "lua ~> 5.1",
+  "inspect ~> 3.1.0",
+  "lua-resty-jwt ~> 0.1.10-1"
 }
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.helloworld.handler"] = "helloworld/handler.lua",
-    ["kong.plugins.helloworld.schema"] = "helloworld/schema.lua",
-    ["kong.plugins.helloworld.access"] = "helloworld/access.lua",
+    ["kong.plugins.mis-login.handler"] = "mis-login/handler.lua",
+    ["kong.plugins.mis-login.schema"] = "mis-login/schema.lua",
+    ["kong.plugins.mis-login.access"] = "mis-login/access.lua",
     }
 }

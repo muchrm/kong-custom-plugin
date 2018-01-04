@@ -11,7 +11,7 @@ docker run -d --name kong \
     -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
     -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
     -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
-    -e "KONG_CUSTOM_PLUGINS=helloworld"  \
+    -e "KONG_CUSTOM_PLUGINS=mis-login"  \
     -e "KONG_LOG_LEVEL=debug" \
     -p 8000:8000 \
     -p 8443:8443 \
@@ -19,7 +19,7 @@ docker run -d --name kong \
     -p 8444:8444 \
     muchrm/kong:0.11.2
 
-sleep 20
+sleep 30
 
 docker run -d -p 8080:8080 --name kong-dashboard \
     --link kong \
